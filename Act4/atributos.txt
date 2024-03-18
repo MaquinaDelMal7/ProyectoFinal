@@ -1,0 +1,49 @@
+**Nombre del archivo:** /c/Users/Javie/NTUSER.DAT
+**Permisos:** 644
+**Usuarios:** Javie
+**Grupo:** UNKNOWN
+**Tamaño:**  bytes
+**Fecha y hora de la modificacion:** 2024-02-17 15:42:14
+
+**Nombre del archivo:** /c/Users/Javie/ntuser.dat.LOG1
+**Permisos:** 644
+**Usuarios:** Javie
+**Grupo:** UNKNOWN
+**Tamaño:**  bytes
+**Fecha y hora de la modificacion:** 2023-11-22 15:51:54
+
+**Nombre del archivo:** /c/Users/Javie/ntuser.dat.LOG2
+**Permisos:** 644
+**Usuarios:** Javie
+**Grupo:** UNKNOWN
+**Tamaño:**  bytes
+**Fecha y hora de la modificacion:** 2023-11-22 15:51:54
+
+**Nombre del archivo:** /c/Users/Javie/NTUSER.DAT{9c6c0cea-24ed-11ee-8c5e-f43bd85d95ac}.TM.blf
+**Permisos:** 644
+**Usuarios:** Javie
+**Grupo:** UNKNOWN
+**Tamaño:**  bytes
+**Fecha y hora de la modificacion:** 2023-11-22 15:51:56
+
+**Nombre del archivo:** /c/Users/Javie/NTUSER.DAT{9c6c0cea-24ed-11ee-8c5e-f43bd85d95ac}.TMContainer00000000000000000001.regtrans-ms
+**Permisos:** 644
+**Usuarios:** Javie
+**Grupo:** UNKNOWN
+**Tamaño:**  bytes
+**Fecha y hora de la modificacion:** 2023-11-22 15:51:54
+
+**Nombre del archivo:** /c/Users/Javie/NTUSER.DAT{9c6c0cea-24ed-11ee-8c5e-f43bd85d95ac}.TMContainer00000000000000000002.regtrans-ms
+**Permisos:** 644
+**Usuarios:** Javie
+**Grupo:** UNKNOWN
+**Tamaño:**  bytes
+**Fecha y hora de la modificacion:** 2023-11-22 15:51:54
+
+**Nombre del archivo:** /c/Users/Javie/ntuser.ini
+**Permisos:** 644
+**Usuarios:** Javie
+**Grupo:** UNKNOWN
+**Tamaño:**  bytes
+**Fecha y hora de la modificacion:** 2023-11-22 15:51:54
+
