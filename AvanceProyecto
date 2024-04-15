@@ -1,0 +1,112 @@
+import tkinter as tk
+from tkinter import messagebox
+
+def login():
+    username = entry_username.get()
+    password = entry_password.get()
+    if username == 'Vucetich' and password == 'huev0s2':
+        messagebox.showinfo("Inicio de sesión exitoso", "Bienvenido, profesor")
+        dashboard_window()
+    else:
+        messagebox.showerror("Error de inicio de sesión", "usuario o contraseña incorrectas")
+
+def dashboard_window():
+    def select_platform(platform):
+        if platform == 'preparatoria':
+            preparatoria_window()
+        elif platform == 'universidad':
+            universidad_window()
+        dashboard_window.destroy()
+
+    dashboard_window = tk.Toplevel(root)
+    dashboard_window.title("Dashboard")
+    label_dashboard = tk.Label(dashboard_window, text="Bienvenido, profesor!")
+    label_dashboard.pack()
+
+    label_platform = tk.Label(dashboard_window, text="Seleccione la plataforma:")
+    label_platform.pack()
+
+    button_preparatoria = tk.Button(dashboard_window, text="Preparatoria", command=lambda: select_platform('preparatoria'))
+    button_preparatoria.pack()
+
+    button_universidad = tk.Button(dashboard_window, text="Universidad", command=lambda: select_platform('universidad'))
+    button_universidad.pack()
+
+def preparatoria_window():
+    preparatoria_window = tk.Toplevel(root)
+    preparatoria_window.title("Preparatoria")
+
+    label_materia = tk.Label(preparatoria_window, text="Seleccione la materia:")
+    label_materia.pack()
+
+    # Suponiendo que tienes una lista de materias para elegir
+    materias = ['Matemáticas', 'Historia', 'Física', 'Química']
+    selected_materia = tk.StringVar()
+    selected_materia.set(materias[0])
+    dropdown_materias = tk.OptionMenu(preparatoria_window, selected_materia, *materias)
+    dropdown_materias.pack()
+
+    button_open_group = tk.Button(preparatoria_window, text="Abrir grupo", command=open_group)
+    button_open_group.pack()
+
+    label_horario = tk.Label(preparatoria_window, text="Horario del profesor:")
+    label_horario.pack()
+
+    # Suponiendo que tienes un diccionario con el horario del profesor
+    horario_profesor = {
+        'Lunes': 'Matemáticas (8:00-9:30), Historia (10:00-11:30)',
+        'Martes': 'Física (8:00-9:30), Química (10:00-11:30)',
+        'Miércoles': 'Matemáticas (8:00-9:30), Historia (10:00-11:30)',
+        'Jueves': 'Física (8:00-9:30), Química (10:00-11:30)',
+        'Viernes': 'Matemáticas (8:00-9:30), Historia (10:00-11:30)',
+    }
+    for dia, clases in horario_profesor.items():
+        tk.Label(preparatoria_window, text=f"{dia}: {clases}").pack()
+
+    label_alumnos = tk.Label(preparatoria_window, text="Progreso de los estudiantes:")
+    label_alumnos.pack()
+
+    # Suponiendo que tienes una lista de alumnos con su progreso
+    alumnos = {
+        'Javier': {'Matemáticas': 85, 'Historia': 70, 'Física': 90, 'Química': 75},
+        'Víctor': {'Matemáticas': 80, 'Historia': 85, 'Física': 75, 'Química': 80},
+        'Ángel': {'Matemáticas': 70, 'Historia': 95, 'Física': 95, 'Química': 100},
+        'Berterame': {'Matemáticas': 100, 'Historia': 95, 'Física': 95, 'Química': 100},
+    }
+    for alumno, progreso in alumnos.items():
+        tk.Label(preparatoria_window, text=f"{alumno}: {progreso}").pack()
+
+    button_forum = tk.Button(preparatoria_window, text="Foro de discusión", command=open_forum)
+    button_forum.pack()
+
+def open_group():
+    # Aquí se abriría el grupo de la materia seleccionada
+    pass
+
+def open_forum():
+    # Aquí se abriría el foro de discusión
+    pass
+
+def universidad_window():
+    universidad_window = tk.Toplevel(root)
+    universidad_window.title("Universidad")
+    label_universidad = tk.Label(universidad_window, text="Funcionalidades para universidad")
+    label_universidad.pack()
+
+root = tk.Tk()
+root.title("Sistema de Gestión Educativa")
+
+label_username = tk.Label(root, text="Usuario:")
+label_username.pack()
+entry_username = tk.Entry(root)
+entry_username.pack()
+
+label_password = tk.Label(root, text="Contraseña:")
+label_password.pack()
+entry_password = tk.Entry(root, show="*")
+entry_password.pack()
+
+button_login = tk.Button(root, text="Iniciar sesión", command=login)
+button_login.pack()
+
+root.mainloop()
